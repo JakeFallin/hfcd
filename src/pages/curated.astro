@@ -1,0 +1,36 @@
+---
+import Container from "@components/container.astro";
+import Cta from "@components/cta.astro";
+import Features from "@components/features.astro";
+import Footer from "@components/footer.astro";
+import Hero from "@components/hero.astro";
+import Logos from "@components/logos.astro";
+import Layout from "@layouts/Layout.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Button from "@components/ui/button.astro";
+
+---
+
+<Layout title="Curated">
+  <Container>
+    <Sectionhead>
+        <Fragment slot="title">Curated</Fragment>
+        <Fragment slot="desc"
+          >A elegant shop.</Fragment
+        >
+        
+      </Sectionhead>
+      
+      <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+        <Button
+        link="https://goo.gl/maps/rVumx8ovovszpHNR7" 
+       >
+            Take me There
+          </Button>  
+          <h1>
+          <p> 75 NJ-15,</p>  Lafayette, NJ
+        </h1>  
+        
+    </div>
+  </Container>
+</Layout>

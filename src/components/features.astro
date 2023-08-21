@@ -1,0 +1,50 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Increase Your Home's Value",
+    description:
+      "Surface level touches or major renovations, our service will increase your home value.",
+    icon: "bx:bxs-home",
+  },
+  {
+    title: "Custom Designed: Just For You",
+    description:
+      "We create general and specific use custom colors to fit any need.",
+    icon: "bx:bxs-paint-roll",
+  },
+  {
+    title: "New and Antique Finishings",
+    description:
+      "Either visit Curated or consult with us, we will help you find the perfect home accessories.",
+    icon: "bx:shopping-bag",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-[#71949f]">
+    Everything you need to build a better home
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    HFCD works with any budget.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>

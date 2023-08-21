@@ -1,0 +1,40 @@
+---
+import { Image } from "@astrojs/image/components";
+import logo from "assets/logo.png"
+import Link from "@components/ui/link.astro";
+---
+
+<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-8">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Image
+      src={logo}
+      alt="Astronaut in the air"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1 class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight text-[#71949f]">
+      Hope Fallin Color & Design
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+
+      HFCD is a interior design company, helping your house become more inspired. <wbr/>
+        Visit our retail store Curated in Lafayette, NJ today, or inquire about a consultation.
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <Link text-[#71949f]
+        href="/contact"
+        target="_blank"
+        rel="noopener">Inquire Now</Link
+      >
+      <Link
+        size="lg"
+        style="outline"
+        rel="noopener"
+        href="/curated"
+        target="_blank">Visit the Shop</Link
+      >
+    </div>
+  </div>
+</main>

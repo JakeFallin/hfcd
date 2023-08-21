@@ -1,0 +1,85 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import { Image } from "@astrojs/image/components";
+
+const TeamImg1 = "https://images.squarespace-cdn.com/content/v1/57d0a9a58419c274d39affa7/1571834211033-JG7R73NOVX55VWAEPXD5/IMG_5660.JPG";
+const TeamImg2 = "https://lh3.googleusercontent.com/pw/AIL4fc94gVtEW1KSsCoMaud0_f2EDqQYpjs6wOJ2RLGDGDil8EAwqTD1hXdG4PYYY6lFg4OXaBWqVar8XtYeekHwhKiEuy9zdPC_-jRjuB_haKY3RVwENRfLcCDbLR9CdIf7orFbH-uCs5nlLBWtN4HFgErn5RxPmEjiD7MBLeJGNIqnFHb9kmOzBc7CajCKEZ77Ra20AHS7ZYFbwHMlK2U800tJBwgspRLnmq0VQXF6y1RC9FdTmS7r1QdhDtCISx3ebD1lWS0PC82AOI9WWQounDJLJnlsY2PYIJd92HYAoknyGB1o5kIxLGIi0L65wnGyLe_kksSR_qj417FXXoWHlk5PY9PMCu8KhG4KZ3C9gMuVqart-k8sfRKsPa3ANyVG8MEoM62aQyzBxWAr3BnYW8x_anFJkshE0ecQBHy-3HIfDBOLCs0CJu8U__oxgEvRTnz1LAq0pzWxSWe_H8G-HGJxR5OeF3mgMiW3XY7KR6pGzeGJSssXV7kp3qJwkw53M0RYHsueP2Z4D05BG_jy3L74SDqqbz_74UGplySAeEzmdTfPuF-4jeZxTbZJNlOM7fx-H5xtah87IbUSz_VB0AS9vUm34eqoRbWQKq9mQgFLXR3KFbUNvfhL1L5VNfyaPQsRUdPFG05A_NMg3JLK3yKKY6Ztj2eZKwic0BNTyB7cAiaJsIzSH-zuQ4LJosIAWT1GnspMEnw45GdgbGwtK0HofWtjFr6iXk5-NasLRulaWreYXSo-YsTjPYVC9b4vuL_ZviN0oKLyLtZpXoeWYTEJtY5h3373z3qtz4_2kr71ptHFq9_JeDE15YZfnyLBlY2dZmfIa1LuvpZDc91QF03MdwQiwh4ZU2vNNBkhFDNZuby-y5Qtt11gfeQFZ0E38i3ORGyTIO30ZE6khDBcLDhJwwg0iNoUJVc4AewCsQ4XmlmanyTtwDS9xXp2b9wsCJ-C-dZZP0kOyjeoMJBZRMcU3hPj4PJS=w985-h1313-s-no?authuser=0";
+const TeamImg3 = "https://lh3.googleusercontent.com/pw/AIL4fc-RIGL_ep1XHYEXl12AoeC11A71AvayZhUEqOSKYwm9KYSrjc4cwcmDNfkVKfTzSpYdlOIIGS7mGFPP1QK6kIy8KszzflUS9dxUYHGSIT1O1268D2lGFysWgJLp6iltFjrn4o_H9YjpjgsTvTjWJqt_Av_k8jVLH4B0wUQ46CbG9SQMqwMJvySR7ta0Zy-grgZVRjF8ZoSdAA6e84QlD7oMmShj99fQVefpxikl7-41Gi2byf_b27vb7PRfl9X2KwkHRny3GjMPDqVicI5RZuqTHlmQ4f7CNXvUPx44zHIQ7YefT1kDCNZHVjrGpfCVWQj1n_iCond7YX2j2yEcgCezy57KaAXIRGft9PBV8U6vmWf2KQv7mmF1n5odysw2OGv6XWzSOxPlJdAdKHri40IJquMKaR0s2NbLtC69XUG83FnzcVCsefwEZA7CjfcAHcUNivCHhf_dQhvY0_NSEWlaB6sCYXVUXuSSXT_hPDBDx-I1KdJ-ZBppL3VB71cmFF8ojNp_nHdzCjKe7HPx_sfByvmgjCgBUrAxDK-806QU6EPvo9UaqInUM5atAzRlafG31Nc__0Qt9XJQ7h3FrR0BPAf8ePoRgd1dqz4xweHMdEyFYuhqBskG5rRyqESGIUSfg3_2HEfWH_74XaoWzyYGrarRK3QkMl-VVzbqzpO4_xx0NJHfyVbRqFPeUwki1hCI37buEuktxNz9m1orJ2rin-H6Y9zsCbWJMvck0rc6UM67LPO4ddH5W6l5tOSjdBxHfTNBNK4Vx9nmRkQ0IvlOdgAY6u8v85yGUUyusbHOwDnQcBqiS2X5mZyifEw9wiLo4wbJ6F3pzP9e8vBjjTQLwAfdFpZn9YYQjwX8Tkx5Q6z-NJy4GvUvqgT_HY3moT3lOBgpmY6qdJT-giODe0vtWM3Dv9fy1dGAAiOGfKjIeIjYnNw9Vse41CNrqlhv4ndpwOjsGf_hgX4zgf5hUb4XnTM4CUY-=w1233-h926-s-no?authuser=0";
+
+const team = [
+  {
+    name: "Hope Fallin",
+    title: "Founder",
+    avatar: {
+      src: TeamImg1,
+      width: 480,
+      height: 560,
+    },
+  },
+  {
+    name: "Jacob Fallin",
+    title: "CTO and CFO",
+    avatar: {
+      src: TeamImg2,
+      width: 580,
+      height: 580,
+    },
+  },
+  {
+    name: "Co-Cheif Ball Officers",
+    title: "Finnley and Luca",
+    avatar: {
+      src: TeamImg3,
+      width: 580,
+      height: 580,
+    },
+  },
+];
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">About</Fragment>
+      <Fragment slot="desc">We are a small passionate team.</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
+        Empowering the world with color and design.
+      </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+       Hope Fallin graduated from American University followed by a J.D. from Seton Hall University Law School. In the years that followed, she was blessed to be able to live in both Tokyo and London where her love of design, paint, and wallpaper was cultivated on an international level.
+
+She studied with Dallas based interior designer Amity Gillespie in Tokyo and then spent four years in the UK studying their unique paints and wall coverings. Color was always the basis of Hope's love of design.
+
+In 2015, she started focusing all her time and interest on architectural color and in 2016 opened Hope Fallin Color & Design Hope has studied and receivied her Certification in Architectural Color Design (CACC) under famed Color Designer and Artist Teresa Tullio.
+
+She was trained in all brands of paint but has found that even with the millions of choices, there were some important missing shades. Thus, Hope has developed over 120 custom colors that can only be purchased through her at the Sherwin Williams store in Ridgewood, New Jersey. Word in Bergen County has spread quickly about Hope's ability to find the perfect color and/or palette within minutes of walking into a client's home. In fact, many of patrons to the Sherwin Williams store where she makes her custom colors, have called her the "paint whisperer" when she overheard what they were looking for and handed them the exact color they had in their mind..
+      </p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+      {
+        team.map((item) => (
+          <div class="group">
+            <div class="w-full aspect-square">
+              <Image
+                {...item.avatar}
+                format="avif"
+                alt="Team"
+                class="w-full h-full object-cover rounded transition  group-hover:-translate-y-1 group-hover:shadow-xl"
+              />
+            </div>
+
+            <div class="mt-4 text-center">
+              <h2 class="text-lg text-gray-800"> {item.name}</h2>
+              <h3 class="text-sm text-slate-500"> {item.title}</h3>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</Layout>

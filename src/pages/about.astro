@@ -5,17 +5,20 @@ import Sectionhead from "@components/sectionhead.astro";
 import { Image } from "@astrojs/image/components";
 
 
-const img1 = "assets/hope.jpg"
-const img2 = "assets/jake.jpg"
-const img3 = "assets/dogs.jpg"
+const img1 = "@assets/hope.png"
+const img2 = "@assets/jake.png"
+const img3 = "@assets/dogs.png"
 
+import logo1 from "assets/jake.png"
+import logo2 from "assets/hope.png"
+import logo3 from "assets/dogs.png"
 
 const team = [
   {
     name: "Hope Fallin",
     title: "Founder",
     avatar: {
-      src: img1,
+      src: logo2,
       width: 480,
       height: 560,
     },
@@ -24,7 +27,7 @@ const team = [
     name: "Jacob Fallin",
     title: "CTO and CFO",
     avatar: {
-      src: img2,
+      src: logo1,
       width: 580,
       height: 580,
     },
@@ -33,7 +36,7 @@ const team = [
     name: "Co-Cheif Ball Officers",
     title: "Finnley and Luca",
     avatar: {
-      src: img3,
+      src: logo3,
       width: 580,
       height: 580,
     },
